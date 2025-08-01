@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                <div>
+                    <h2>{{ produto['nome'] }}</h2>
+                    <p>Preço: R$ {{ produto['preco'] }}</p>
+                    {% if produto['imagem_url'] %}
+                        <img src="{{ produto['imagem_url'] }}" alt="Imagem do produto" width="250">
+                    {% else %}
+                        <p>Imagem não disponível</p>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

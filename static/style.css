@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* Lista de produtos */
+ul {
+    list-style-type: none;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Cada produto */
+li {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-5px);
+}
+
+/* Container do conteúdo do produto */
+li div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Nome do produto */
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Preço */
+p {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Imagem */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
